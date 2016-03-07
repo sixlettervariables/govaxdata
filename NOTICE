@@ -1,0 +1,5 @@
+The vaxdata package is a conversion from libvaxdata written by Lawrence Baker
+and released into the public domain by the United States Geological Survey
+(USGS). No claims are made to the original work within the public domain. The
+USGS released libvaxdata with a disclaimer, reproduced within LICENSE, which
+applies to all portions from the original logic.
