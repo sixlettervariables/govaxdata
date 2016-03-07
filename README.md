@@ -249,6 +249,7 @@ All contributions to the project will be considered for inclusion, simply submit
 
 # License
 The MIT License
+
 Portions copyright (C) 2016 Christopher A. Watford, no claims made to original
 USGS work in public domain.
 
