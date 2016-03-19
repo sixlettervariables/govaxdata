@@ -28,7 +28,7 @@ func VaxFFloatfromFloat32(f float32) (VaxFFloat, error) {
 
 	var (
 		result uint32
-		err    error = nil
+		err    error
 	)
 
 	ieeepart1 := math.Float32bits(f)
@@ -51,7 +51,7 @@ func VaxFFloatfromFloat32(f float32) (VaxFFloat, error) {
 			m <<= 1
 			for (m & HiddenBit) == 0 {
 				m <<= 1
-				e -= 1 // Adjust exponent
+				e-- // Adjust exponent
 			}
 			// Adjust mantissa to hidden-bit form
 			m &= MantissaMask
@@ -94,7 +94,7 @@ func VaxGFloatfromFloat64(f float64) (VaxGFloat, error) {
 	var (
 		in       uint64 = math.Float64bits(f)
 		vaxpart1 uint32
-		err      error = nil
+		err      error
 	)
 
 	ieeepart1 := uint32(in >> 32)
@@ -123,7 +123,7 @@ func VaxGFloatfromFloat64(f float64) (VaxGFloat, error) {
 			for (m & HiddenBit) == 0 {
 				m = (m << 1) | (vaxpart2 >> 31)
 				vaxpart2 <<= 1
-				e -= 1 // Adjust exponent
+				e-- // Adjust exponent
 			}
 
 			// Adjust mantissa to hidden-bit form
