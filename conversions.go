@@ -19,7 +19,7 @@
 // responsibility is assumed by the USGS in connection therewith.
 //
 
-// vaxdata allows conversions to and from VAX floating point formats.
+// Package vaxdata allows conversions to and from VAX floating point formats.
 package vaxdata
 
 // Assumes LittleEndian architecture

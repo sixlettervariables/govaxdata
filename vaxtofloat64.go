@@ -41,7 +41,7 @@ func Float64fromVaxGFloat(buf []byte) (float64, error) {
 
 	var (
 		ieeepart1, ieeepart2 uint32
-		err                  error = nil
+		err                  error
 	)
 
 	vaxpart2 := uint32FromVaxbits(buf[:4])
